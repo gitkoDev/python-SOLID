@@ -1,7 +1,10 @@
 """ SRP = Single Responsibility principle
-This principle states that each class (or structure) should only execute methods directly connected with it. In other words: a class or function should do only one thing - and do it well.
-Below we have a superclass Person, which is inherited by 2 child classes: User and Customer. We need to save data about our customers and users in txt files. However, if we create a new superclass other than Person, we would need to duplicate the saving functionality. This could potentially lead to bugs.
-Instead, we should follow the Separation of Concern approach (SOC a.k.a SRP) and create a separate class that would handle the saving of data for us. This way, if we create new classes that need saving or decide to change the saving process completely, we would only need to edit the code in one place.
+This principle states that each class (or structure) should only execute methods directly connected with it. 
+In other words: a class or function should do only one thing - and do it well.
+Below we have a superclass Person, which is inherited by 2 child classes: User and Customer. We need to save data about our customers and users in txt files. 
+However, if we create a new superclass other than Person, we would need to duplicate the saving functionality. This could potentially lead to bugs.
+Instead, we should follow the Separation of Concern approach (SOC a.k.a SRP) and create a separate class that would handle the saving of data for us. 
+This way, if we create new classes that need saving or decide to change the saving process completely, we would only need to edit the code in one place.
 """
 
 
@@ -77,4 +80,5 @@ class Storage:
 
 
 storage = Storage()
-storage.save_data(5)
+john = User(name="John", email="john@gmail.com")
+alice = Customer(name="Alice", email="alice@gmail.com", money=50)
